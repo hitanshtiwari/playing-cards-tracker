@@ -1,0 +1,199 @@
+/* Background and font */
+body, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Cards frame styling */
+.cards-frame {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cards-frame h2 {
+    margin-bottom: 10px;
+}
+
+#cards-grid {
+    display: grid;
+    grid-template-columns: repeat(13, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Card button styling */
+.card-button {
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-button.black {
+    background-color: black;
+    color: white;
+}
+
+.card-button.grey {
+    background-color: grey;
+    color: white;
+}
+
+.card-button.pink {
+    background-color: #B22222; /* Fire Brick */
+    color: white;
+}
+
+.card-button.purple {
+    background-color: #800808; /* Blood Red */
+    color: white;
+}
+
+/* Ownership frame styling */
+.ownership-frame {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ownership-frame h2 {
+    margin-bottom: 10px;
+}
+
+#ownership-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Player frame styling */
+.player-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-frame input {
+    margin-bottom: 10px;
+}
+
+.suit-button {
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.suit-button.spades {
+    background-color: black;
+    color: white;
+}
+
+.suit-button.clubs {
+    background-color: grey;
+    color: white;
+}
+
+.suit-button.diamonds {
+    background-color: #B22222; /* Fire Brick */
+    color: white;
+}
+
+.suit-button.hearts {
+    background-color: #800808; /* Blood Red */
+    color: white;
+}
+
+/* Control buttons styling */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    font-size: 1rem;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+
+    #ownership-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+
+    .controls {
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
